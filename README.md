@@ -1,6 +1,6 @@
 # Relation-guided acoustic scene classification aided with event embeddings 
 
-please see here for the paper: ....
+please see here for the paper: https://arxiv.org/abs/2205.00499
 
 # Citation
 Please consider citing our paper as
