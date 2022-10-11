@@ -6,13 +6,13 @@ please see here for the paper: https://arxiv.org/abs/2205.00499
 Please consider citing our paper as
 
 ```bibtex
-@INPROCEEDINGS{,
-  author={Hou, Yuanbo and Kang, Bo and Hauwermeiren, Wout Van and Botteldooren, Dick},
-  booktitle={IJCNN 2022 - 2022 International Joint Conference on Neural Networks (IJCNN)}, 
+@INPROCEEDINGS{9892893,
+  author={Hou, Yuanbo and Kang, Bo and Van Hauwermeiren, Wout and Botteldooren, Dick},
+  booktitle={2022 International Joint Conference on Neural Networks (IJCNN)}, 
   title={Relation-guided acoustic scene classification aided with event embeddings}, 
   year={2022},
   volume={},
   number={},
-  pages={},
-  doi={}}
+  pages={1-8},
+  doi={10.1109/IJCNN55064.2022.9892893}}
 ```
