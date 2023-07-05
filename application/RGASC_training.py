@@ -104,6 +104,24 @@ def main(argv):
     event_class = len(config.event_labels)
     model = Model(classes_num, event_class)
 
+    model_scene = torch.load(config.scene_model_path, map_location=config.device)
+    model_event = torch.load(config.event_model_path, map_location=config.device)
+
+    model_dict = model.state_dict()
+    state_dict = {}
+    for k, v in model_dict.items():
+        if '_event' in k:
+            name = k.replace('_event', '')
+            if name in model_event['state_dict'].keys():
+                state_dict[k] = model_event['state_dict'][name]
+        elif k in model_scene['state_dict'].keys():
+            state_dict[k] = model_scene['state_dict'][k]
+        else:
+            print('Not in pretrain model : ', k, v.size())
+
+    model_dict.update(state_dict)
+    model.load_state_dict(model_dict)
+    
     print(model)
     if cuda:
         model.cuda()
