@@ -54,4 +54,11 @@ relation_matrix = data['relation_matrix'].T
 
 relation_scene_event = data['relation_matrix']
 
+scene_model_path = os.path.join(os.getcwd(), 'best_model', 'md_5415_scene_0.7469.tar')
+event_model_path = os.path.join(os.getcwd(), 'best_model', 'md_6365_event_0.9886.tar')
+
 endswith = '.pth'
+if endswith == '.pth' and scene_model_path.endswith('.tar'):
+    scene_model_path = scene_model_path.replace('.tar', endswith)
+    event_model_path = event_model_path.replace('.tar', endswith)
+    
